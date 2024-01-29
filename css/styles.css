@@ -1,5 +1,5 @@
 * {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Josefin Sans";
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -22,8 +22,13 @@ body ul {
   display: flex;
   justify-content: space-between;
   max-width: 1170px;
-  margin: 0 auto;
   padding: 1.5rem 0;
+  margin: 0 auto;
+}
+@media (max-width: 425px) {
+  .header {
+    padding: 1.1rem;
+  }
 }
 .header-brand {
   color: #fff;
@@ -32,53 +37,74 @@ body ul {
 .header-navbar ul {
   height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
-.header-navbar li {
+@media (max-width: 425px) {
+  .header-navbar ul {
+    display: none;
+  }
+}
+.header-navbar ul li {
   margin: 0 1rem;
   text-transform: uppercase;
   font-size: 0.8rem;
 }
-.header-navbar li .active {
+.header-navbar ul li .active {
   color: #20c997;
 }
-.header-navbar li a:hover {
+.header-navbar ul li a:hover {
   color: #20c997;
 }
-.header-social-media {
+.header-social-media ul {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100%;
 }
-.header-social-media li {
+@media (max-width: 425px) {
+  .header-social-media ul {
+    display: none;
+  }
+}
+.header-social-media ul li {
   margin: 0 1rem;
 }
-.header-social-media li a:hover {
+.header-social-media ul li a:hover {
   color: #fff;
 }
 
 .gallery {
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 1.5rem 0;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  max-width: 1170px;
+  padding: 1.5rem 0;
+  margin: 0 auto;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0;
+}
+@media (max-width: 425px) {
+  .gallery {
+    flex-direction: column;
+  }
 }
 .gallery-card {
   width: 31%;
   height: 400px;
   margin-bottom: 4%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   color: #fff;
+}
+@media (max-width: 425px) {
+  .gallery-card {
+    width: 90%;
+    margin-bottom: 6%;
+  }
 }
 .gallery-card-title {
   font-size: 2rem;
@@ -108,7 +134,7 @@ body ul {
 .gallery #card-1:hover {
   background-size: 110%;
   filter: grayscale(0%);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), url("../img/animais.jpg"));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/animais.jpg");
 }
 .gallery #card-2 {
   background-image: url("../img/arquitetura.jpg");
@@ -121,7 +147,7 @@ body ul {
 .gallery #card-2:hover {
   background-size: 110%;
   filter: grayscale(0%);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), url("../img/arquitetura.jpg"));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/arquitetura.jpg");
 }
 .gallery #card-3 {
   background-image: url("../img/cidade.jpg");
@@ -134,7 +160,7 @@ body ul {
 .gallery #card-3:hover {
   background-size: 110%;
   filter: grayscale(0%);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), url("../img/cidade.jpg"));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cidade.jpg");
 }
 .gallery #card-4 {
   background-image: url("../img/decoracao.jpg");
@@ -147,7 +173,7 @@ body ul {
 .gallery #card-4:hover {
   background-size: 110%;
   filter: grayscale(0%);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), url("../img/decoracao.jpg"));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/decoracao.jpg");
 }
 .gallery #card-5 {
   background-image: url("../img/esportes.jpg");
@@ -160,7 +186,7 @@ body ul {
 .gallery #card-5:hover {
   background-size: 110%;
   filter: grayscale(0%);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), url("../img/esportes.jpg"));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/esportes.jpg");
 }
 .gallery #card-6 {
   background-image: url("../img/natureza.jpg");
@@ -173,7 +199,7 @@ body ul {
 .gallery #card-6:hover {
   background-size: 110%;
   filter: grayscale(0%);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), url("../img/natureza.jpg"));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/natureza.jpg");
 }
 .gallery #card-7 {
   background-image: url("../img/paisagem.jpg");
@@ -186,7 +212,7 @@ body ul {
 .gallery #card-7:hover {
   background-size: 110%;
   filter: grayscale(0%);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), url("../img/paisagem.jpg"));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/paisagem.jpg");
 }
 .gallery #card-8 {
   background-image: url("../img/pessoas.jpg");
@@ -199,7 +225,7 @@ body ul {
 .gallery #card-8:hover {
   background-size: 110%;
   filter: grayscale(0%);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), url("../img/pessoas.jpg"));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/pessoas.jpg");
 }
 .gallery #card-9 {
   background-image: url("../img/refeicoes.jpg");
@@ -212,16 +238,16 @@ body ul {
 .gallery #card-9:hover {
   background-size: 110%;
   filter: grayscale(0%);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), url("../img/refeicoes.jpg"));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/refeicoes.jpg");
 }
 
 footer {
   text-align: center;
-  padding: bottom 2rem;
+  padding-bottom: 2rem;
 }
 footer span {
-  color: #20c997;
   font-weight: bold;
+  color: #20c997;
 }
 
 /*# sourceMappingURL=styles.css.map */
